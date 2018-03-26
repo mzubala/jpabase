@@ -20,4 +20,10 @@ public class Auction {
 
   public Integer duration;
 
+  private Auction() {}
+
+  public Auction(String title) {
+    this.title = title;
+  }
+
 }
