@@ -36,7 +36,7 @@ public class Zadanie8 extends TaskTemplate {
 
     executeInTx((em) -> {
       Auction au = em.find(Auction.class, 1L);
-      em.remove(au);
+      //em.remove(au);
     });
 
   }

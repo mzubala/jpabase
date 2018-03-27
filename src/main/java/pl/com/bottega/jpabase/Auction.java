@@ -1,11 +1,9 @@
 package pl.com.bottega.jpabase;
 
-import org.hibernate.annotations.OnDelete;
-import org.hibernate.annotations.OnDeleteAction;
-
 import javax.persistence.*;
 import java.time.LocalDateTime;
-import java.util.*;
+import java.util.LinkedList;
+import java.util.List;
 
 @Entity
 public class Auction {
@@ -25,6 +23,9 @@ public class Auction {
 
   @OneToMany(mappedBy = "auction", cascade = CascadeType.ALL, orphanRemoval = true)
   public List<Bid> bids = new LinkedList<>();
+
+  @Enumerated(EnumType.STRING)
+  public AuctionStatus auctionStatus = AuctionStatus.WAITING;
 
   private Auction() {}
 
