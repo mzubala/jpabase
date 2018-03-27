@@ -19,8 +19,7 @@ public class Auction {
 
   public Integer duration;
 
-  @OneToMany(mappedBy = "auction", cascade = CascadeType.ALL)
-  @OrderColumn
+  @OneToMany(mappedBy = "auction", cascade = CascadeType.ALL, orphanRemoval = true)
   public List<Bid> bids = new LinkedList<>();
 
   private Auction() {}
