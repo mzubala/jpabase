@@ -5,7 +5,7 @@ public class Zadanie4 extends TaskTemplate {
   protected void doTask() {
     Auction auction = new Auction("test");
     auction.duration = 7;
-    auction.id = 1L;
+
     auction.description = "opis";
     executeInTx((em) -> {
       em.merge(auction);

@@ -7,6 +7,8 @@ import java.math.BigDecimal;
 public class Bid {
 
   @Id
+  @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "bid_seq")
+  @SequenceGenerator(name = "bid_seq", sequenceName = "bid_seq")
   public Long id;
 
   public BigDecimal amount;

@@ -8,6 +8,13 @@ import java.util.LinkedList;
 public class User {
 
   @Id
+  @TableGenerator(
+      name = "user_id_table",
+      table = "user_id_table",
+      initialValue = 1,
+      pkColumnName = "id"
+  )
+  @GeneratedValue(strategy = GenerationType.TABLE, generator = "user_id_table")
   public Long id;
 
   public String name;

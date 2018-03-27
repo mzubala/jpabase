@@ -1,5 +1,8 @@
 package pl.com.bottega.jpabase;
 
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
+
 import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.*;
@@ -8,6 +11,7 @@ import java.util.*;
 public class Auction {
 
   @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   public Long id;
 
   public String title;

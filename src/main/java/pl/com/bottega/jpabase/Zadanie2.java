@@ -13,7 +13,7 @@ public class Zadanie2 {
       emf = Persistence.createEntityManagerFactory("DMS");
       EntityManager em = emf.createEntityManager();
       Auction auction = new Auction("first");
-      auction.id = 1L;
+
       auction.description = "auction description";
       auction.start = LocalDateTime.now();
       auction.duration = 7;

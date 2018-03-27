@@ -6,7 +6,7 @@ public class Zadanie2Template extends TaskTemplate {
     executeInTx((em) -> {
       Auction auction = new Auction("test");
       auction.duration = 7;
-      auction.id = 1L;
+
       auction.description = "opis";
       em.persist(auction);
     });
