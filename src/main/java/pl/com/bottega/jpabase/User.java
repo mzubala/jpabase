@@ -15,7 +15,7 @@ public class User {
   @OneToMany(mappedBy = "user")
   public Collection<Bid> bids = new LinkedList<>();
 
-  @OneToOne
+  @OneToOne(cascade = CascadeType.ALL)
   public Address address;
 
 }

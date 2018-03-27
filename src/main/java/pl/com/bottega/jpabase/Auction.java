@@ -19,7 +19,7 @@ public class Auction {
 
   public Integer duration;
 
-  @OneToMany(mappedBy = "auction")
+  @OneToMany(mappedBy = "auction", cascade = CascadeType.ALL)
   @OrderColumn
   public List<Bid> bids = new LinkedList<>();
 

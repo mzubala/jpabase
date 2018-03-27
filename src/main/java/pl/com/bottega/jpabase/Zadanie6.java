@@ -30,11 +30,8 @@ public class Zadanie6 extends TaskTemplate {
     user.bids.add(b1);
     user.bids.add(b2);
     executeInTx((em) -> {
-      em.persist(address);
       em.persist(user);
       em.persist(auction);
-      em.persist(b1);
-      em.persist(b2);
     });
 
     executeInTx((em) -> {
