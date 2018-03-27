@@ -17,7 +17,7 @@ public class Auction {
   @Column(length = 6000)
   public String description;
 
-  public LocalDateTime start;
+  public LocalDateTime start, createdAt, updatedAt;
 
   public Integer duration;
 
@@ -31,6 +31,16 @@ public class Auction {
 
   public Auction(String title) {
     this.title = title;
+  }
+
+  @PrePersist
+  void setCreatedAt() {
+    createdAt = updatedAt = LocalDateTime.now();
+  }
+
+  @PreUpdate
+  void setUpdatedAt() {
+    updatedAt = LocalDateTime.now();
   }
 
 }
