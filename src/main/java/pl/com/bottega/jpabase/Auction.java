@@ -1,12 +1,8 @@
 package pl.com.bottega.jpabase;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.time.LocalDateTime;
-import java.util.Collection;
-import java.util.LinkedList;
+import java.util.*;
 
 @Entity
 public class Auction {
@@ -24,7 +20,8 @@ public class Auction {
   public Integer duration;
 
   @OneToMany(mappedBy = "auction")
-  public Collection<Bid> bids = new LinkedList<>();
+  @OrderColumn
+  public List<Bid> bids = new LinkedList<>();
 
   private Auction() {}
 

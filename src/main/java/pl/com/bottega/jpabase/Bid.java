@@ -1,9 +1,6 @@
 package pl.com.bottega.jpabase;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
@@ -17,7 +14,7 @@ public class Bid {
   @ManyToOne
   public Auction auction;
 
-  @ManyToOne
+  @ManyToOne(fetch = FetchType.LAZY)
   public User user;
 
 }
