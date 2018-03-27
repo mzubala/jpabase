@@ -11,7 +11,7 @@
                       value="org.hsqldb.jdbcDriver"/>
 
             <property name="javax.persistence.jdbc.url"
-                          value="jdbc:hsqldb:hsql://localhost/dms"/>
+                      value="jdbc:hsqldb:hsql://localhost/dms"/>
 
             <property name="javax.persistence.jdbc.user"
                       value="SA"/>

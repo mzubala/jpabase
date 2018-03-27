@@ -25,4 +25,24 @@ public class User {
   @OneToOne(cascade = CascadeType.ALL)
   public Address address;
 
+  @Embedded
+  @AttributeOverrides({
+      @AttributeOverride(name = "countryCode", column = @Column(name = "work_phone_country_code")),
+      @AttributeOverride(name = "number", column = @Column(name = "work_phone_number"))
+  })
+  public PhoneNumber workPhone;
+
+  @Embedded
+  @AttributeOverrides({
+      @AttributeOverride(name = "countryCode", column = @Column(name = "private_phone_country_code")),
+      @AttributeOverride(name = "number", column = @Column(name = "private_phone_number"))
+  })
+  public PhoneNumber privatePhone;
+
+  @ElementCollection
+  private Collection<PhoneNumber> numbers;
+
+  @ElementCollection
+  private Collection<Integer> happyNumbers;
+
 }
