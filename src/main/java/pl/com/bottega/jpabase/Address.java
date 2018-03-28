@@ -12,7 +12,7 @@ public class Address {
 
   public String line1, line2, city, zip, country;
 
-  @OneToOne(mappedBy = "address")
+  @OneToOne(mappedBy = "address", fetch = FetchType.LAZY)
   public User user;
 
 }

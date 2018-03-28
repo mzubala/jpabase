@@ -22,7 +22,7 @@ public class User {
   @OneToMany(mappedBy = "user")
   public Collection<Bid> bids = new LinkedList<>();
 
-  @OneToOne(cascade = CascadeType.ALL)
+  @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
   public Address address;
 
   @Embedded
