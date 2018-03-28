@@ -5,7 +5,7 @@ import java.util.Collection;
 import java.util.LinkedList;
 
 @Entity
-public class User {
+public class User extends BaseEntity {
 
   @Id
   @TableGenerator(

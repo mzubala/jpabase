@@ -3,7 +3,7 @@ package pl.com.bottega.jpabase;
 import javax.persistence.*;
 
 @Entity
-public class Address {
+public class Address extends BaseEntity {
 
   @Id
   @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "address_seq")

@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 @Entity
-public class Auction {
+public class Auction extends BaseEntity {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,7 +19,7 @@ public class Auction {
   @Column(length = 6000)
   public String description;
 
-  public LocalDateTime start, createdAt, updatedAt;
+  public LocalDateTime start;
 
   public Integer duration;
 
@@ -34,16 +34,6 @@ public class Auction {
 
   public Auction(String title) {
     this.title = title;
-  }
-
-  @PrePersist
-  void setCreatedAt() {
-    createdAt = updatedAt = LocalDateTime.now();
-  }
-
-  @PreUpdate
-  void setUpdatedAt() {
-    updatedAt = LocalDateTime.now();
   }
 
 }
