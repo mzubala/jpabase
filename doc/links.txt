@@ -1,3 +1,4 @@
 https://goo.gl/4aW953 - zadania
 https://github.com/mzubala/hrs - system z kluczami złożonymi
 https://en.wikibooks.org/wiki/Java_Persistence/JPQL - jpql wiki
+https://github.com/mzubala/dms - kompletna aplikacja spring + hibernate
