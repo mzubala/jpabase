@@ -1,17 +1,15 @@
 package pl.com.bottega.jpabase;
 
-import antlr.StringUtils;
-
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
 
-public class Zad13 extends TaskTemplate {
+public class Zadanie13 extends TaskTemplate {
 
   public static void main(String[] args) {
-    new Zad13().execute();
+    new Zadanie13().execute();
   }
 
   @Override
