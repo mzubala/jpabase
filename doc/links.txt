@@ -2,3 +2,5 @@ https://goo.gl/4aW953 - zadania
 https://github.com/mzubala/hrs - system z kluczami złożonymi
 https://en.wikibooks.org/wiki/Java_Persistence/JPQL - jpql wiki
 https://github.com/mzubala/dms - kompletna aplikacja spring + hibernate
+https://github.com/mzubala/sales/blob/cachetests/src/test/java/pl/com/bottega/play/CacheTest.java - cache tests
+https://goo.gl/forms/l7BfthFQK3mf4bKp1 - ankieta
