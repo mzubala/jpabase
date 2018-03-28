@@ -39,10 +39,4 @@ public class User {
   })
   public PhoneNumber privatePhone;
 
-  @ElementCollection
-  private Collection<PhoneNumber> numbers;
-
-  @ElementCollection
-  private Collection<Integer> happyNumbers;
-
 }

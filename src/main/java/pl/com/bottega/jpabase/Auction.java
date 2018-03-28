@@ -1,5 +1,7 @@
 package pl.com.bottega.jpabase;
 
+import org.hibernate.annotations.BatchSize;
+
 import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.LinkedList;
@@ -22,6 +24,7 @@ public class Auction {
   public Integer duration;
 
   @OneToMany(mappedBy = "auction", cascade = CascadeType.ALL, orphanRemoval = true)
+  @BatchSize(size = 13)
   public List<Bid> bids = new LinkedList<>();
 
   @Enumerated(EnumType.STRING)
